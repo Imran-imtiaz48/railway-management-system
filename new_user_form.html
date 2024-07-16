@@ -1,23 +1,74 @@
-<html>
-<body style=" background-image: url(userlogin.png);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" >
-
-<form action="new_user_form.php" method="post">
-<div align="center">
-Kindly enter your credentials!!!<br><br>
-Password: <input type="password" name="password" required><br><br>
-E-mail ID: <input type="text" name="emailid" required><br><br>
-Mobile No.: <input type="text" name="mobileno" required><br><br>
-dob: <input type="date" name="dob" required><br><br>
-
-<input type="submit" value="Save"><br><br>
-
-<a href="index.htm">Home Page</a>
-</div>
-</form>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            background-image: url('userlogin.png');
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container input[type="password"],
+        .form-container input[type="text"],
+        .form-container input[type="date"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-container a {
+            display: block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kindly Enter Your Credentials</h2>
+        <form action="new_user_form.php" method="post">
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="text" name="emailid" placeholder="E-mail ID" required><br>
+            <input type="text" name="mobileno" placeholder="Mobile No." required><br>
+            <input type="date" name="dob" required><br>
+            <input type="submit" value="Save"><br>
+            <a href="index.htm">Home Page</a>
+        </form>
+    </div>
 </body>
 </html>
